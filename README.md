@@ -1,57 +1,84 @@
-# Pitch
-
-##  A web application that allows the users to post pitches, comment and vote on pitches.
-
-## By [Brian Mumo](https://github.com/brayomumo)
-
+# Moringa Pitch
 
 ## Description
-This is a web application that allows various users to submit a short pitch. Users can also be able to view other pitches from different categories (Pick-up Lines, Interview Pitches, Product Pitches, Promotion Pitches), comment and vote. For a user to do any of that, they need to have registered.
 
-## User Stories
-* As a user I would like to view the different categories.
-* As a user I would like to see the pitches other people have posted.
-* As a user I would like to comment on the different pitches and leave feedback.
-* As a user I would like to submit a pitch in any category.
-* As a user I would like to vote on the pitch they liked and give it a downvote or upvote.
+Moringapitch is a flask application providing access to all capstone projects Moringa School Students undertook allowing users to also pitch project ideas to be viewed by other users
 
-## Specifications
-| Behaviour | Input | Output |
-| --------------- | :----------:| --------: |
-|Display Various Pitch Categories | N/A | Various pitches grouped by category are displayed |
-|Display pitches | **Click** on a Category| A page with a list of pitches from the selected category |
-|Add new pitch | **Click** New pitch | User Should register/sign in to add new pitch |
-|View Pitches | **Click** on a pitch | View a pitch and comments |
-|Comment on a pitch | **Click** Comment | Registered User displays a form where a user can comment on a certain pitch |
+#### Author
+
+ -Joflix
 
 
 ## Setup/Installation Requirements
-* internet access
-* $ `git clone https://github.com/brayomumo/Pitch.git`
-* $ `cd Pitch`
-* $ `python3.6 -m venv virtual` (install virtual environment)
-* $ `source virtual/bin/activate`
-* $ `python3.6 -m pip install -r requirements.txt` (install all dependencies)
-* Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app('development')
-* $ `chmod +x start.sh` (make the program executable)
-* $ `./start.sh`
 
+### Prerequisites
 
-## Support and Contacts
+- python3.6 and above
+- pip
+- Virtual environment(virtualenv)
 
-In case You have any issues using this code please do no hesitate to get in touch with me through brayomumo5@gmail.com or leave a commit [here](https://github.com/brayomumo/Pitch) on github.
+### Cloning and running
 
+- Clone the application using git clone(this copies the app onto your device). In terminal:
 
-## Known Bugs
+          `git clone https://github.com/IJaccojwang/moringapitch/`
+           `cd moringapitch`
 
-The upvote and downvote is not working
+- Creating the virtual environment
+
+          `python3.6 -m venv --without-pip virtual`
+          `source virtual/bin/env`
+          `curl https://bootstrap.pypa.io/get-pip.py | python`
+
+- Installing Flask and other Modules
+
+          `python3.6 -m pip install Flask`
+          `python3.6 -m pip install Flask-Bootstrap`
+          `python3.6 -m pip install Flask-Script`
+          `python3.6 -m pip install -r requirements.txt`
+
+- Run the application:
+
+          `chmod a+x start.sh`
+          `./start.sh`
+
+### Testing the Application
+
+- To run the tests for the class files:
+
+          `python3.6 manage.py test`
 
 ## Technologies Used
-- Python3.6
-- Flask framework
-- Bootstrap
-- PostgreSQL
+
+```
+* Python 3.6
+* Flask
+* Postgresql
+* MDBootstrap
+```
+
+## Behaviour driven development/ Specifications
+
+| Behaviour                                                         | Sample Input                                        | Sample Output                                                 |
+| ----------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------- |
+| Display landing page with pitches categorised according to team | Link to live site                                   | The landing page is displayed                                 |
+| Display all projects for a selected team                        | Click on 'view projects' button                     | projects for the selected team displayed                    |
+| View details of pitch, including comments of the pitch            | Click on 'view more' button                         | Display project description and comments                      |
+| Prompt user to login                                              | Click on 'sign in'/'add comment'/'add pitch' button | Display login form                                            |
+| Authenticate user to add a Pitch and comment                      | If user has no account a sign up form is displayed  | User is automatically logged in and free to add pitch/comment |
+| Allow user to log out                                             | Click on 'logout' button                            | User is automatically logged out                              |
+
+### Link to live site
+
+[Here](https://github.com/JOFLIX/pitcher) is a link to the live site
+
+## Support and contact details
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ### License
 
-**[MIT](./LICENSE)** (c) 2017 **Brayo mumo **
+[MIT License](https://choosealicense.com/licenses/mit/)
+Copyright (c) {2019}
