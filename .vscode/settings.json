@@ -1,0 +1,5 @@
+{
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "workbench.colorTheme": "Default Dark+",
+    "python.pythonPath": "virtual/bin/python3"
+}
