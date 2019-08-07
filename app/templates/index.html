@@ -9,16 +9,16 @@
 
     <div class="container" style="font-family: 'Russo One', sans-serif;">
       <div class="row" style="margin-top:30px">
-        <h4 class="text-left"><a class="btn btn-primary" href="/add/category"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>   Add Category </a></h4>
-
-          {{ macro.displayCategoryList(categories) }}
+        <h4 class="text-left"><a class="btn btn-primary" href="/add/category"><i class="fas fa-bullhorn"></i></span style="text-align: center">   Add Category </a></h4>
+          <div class="grid-item">{{ macro.displayCategoryList(categories) }}</div>
+          
         </div>
     </div>
 
 {% endblock %}
 {% macro displayPitches(pitch_list) %}
   {% for pitches in pitch_list %}
-    <div class="col-md-6">
+    <div class="">
       <div class="well">
         <div class="row">
           <div class="col-md-6">
