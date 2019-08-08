@@ -31,7 +31,7 @@ class User(UserMixin,db.Model):
     pitches = db.relationship("Pitch", backref="user", lazy = "dynamic")
     comment = db.relationship("Comments", backref="user", lazy = "dynamic")
     vote = db.relationship("Votes", backref="user", lazy = "dynamic")
-
+    image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
 
     # securing passwords
     @property

@@ -146,3 +146,38 @@ def vote_count(id):
     total_votes = votes.count()
 
     return total_votes
+
+@main.route('/about')
+def about():
+    """ View root page function that returns index page """
+
+    category = PitchCategory.get_categories()
+
+    title = 'About'
+    return render_template('about.html', title = title)
+
+
+@main.route('/profile')
+def profile():
+    """ View root page function that returns index page """
+
+    title = 'My Profile'
+    return render_template('profile.html', title = title, form = form)
+       
+        
+@main.route('/features')
+def features():
+    """ View root page function that returns index page """
+
+    title = 'features'
+    return render_template('features.html', title = title)
+       
+@main.route('/contact_us')
+def contact_us():
+    """ View root page function that returns index page """
+
+    title = 'Contact Us'
+    return render_template('contact_us.html', title = title)
+       
+         
+
