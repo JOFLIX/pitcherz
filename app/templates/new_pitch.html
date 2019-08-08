@@ -6,11 +6,18 @@
 {%endblock%}
 
 {% block content %}
-<div class="container col-md-6" style="text-align:center">
+<div class="container col-md-8" style="text-align:center">
+	<div class="file-upload-wrapper">
+   <input type="file" id="input-file-now-custom-2" class="file-upload"
+  data-height="500" />
+</div>
     <h3>{{category.name|upper}} PITCH</h3>
   <div class="well">
     <hr>
     {{wtf.quick_form(pitch_form)}}
  </div>
 </div>
+<script>
+	$('.file-upload').file_upload();
+</script>
 {% endblock %}
