@@ -8,7 +8,7 @@ chardet==3.0.4
 Click==7.0
 colorama==0.3.7
 configparser==3.5.0b2
-cryptography==2.6.1
+cryptography==3.2
 easygui==0.96
 entrypoints==0.3
 enum34==1.1.6
